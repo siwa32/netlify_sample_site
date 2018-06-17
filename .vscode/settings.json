@@ -1,0 +1,6 @@
+{
+  // Full path for the asciidoctor binary/executable
+  "AsciiDoc.asciidoctor_command": "asciidoctor -a skip-front-matter -a outdir=../../ -a imagesdir=../../static/images -a imagesoutdir=../../static/images -r asciidoctor-diagram -o-",
+  // Use asciidoctor js instead of the 'html_generator
+  "AsciiDoc.use_asciidoctor_js": false,
+}

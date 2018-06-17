@@ -1,0 +1,5 @@
+.asciidoctor
+.bundle
+vendor
+public/*
+static/images/diag-*

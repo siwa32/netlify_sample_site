@@ -1,0 +1,139 @@
+---
+title: "First Post"
+date: 2018-06-15T18:21:39+09:00
+description: ""
+categories:
+  - sample
+tags:
+  - AsciiDoc
+draft: false
+---
+
+:lang: ja
+:toc: left
+:toclevels: 3
+:toc-title: 目次
+:sectnums:
+:sectnumlevels: 4
+:sectlinks:
+:chapter-label:
+:imagesdir: /images
+:imagesoutdir: ./static/images
+:example-caption: 例
+:table-caption: 表
+:figure-caption: 図
+:icons: font
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
+:stem: latexmath
+:author: IWASE Shigeaki
+:revnumber: 0.1
+:revdate: 2018-06-15T18:21:39+09:00
+
+= asciidocサンプル
+
+== テキスト装飾
+
+.テキスト装飾
+[cols="a,a"]
+|====
+|----
+_italic_
+前後__space__が無い場合
+----| _italic_ +
+前後に__space__が無い場合
+|----
+*bold*
+前後に**スペース**が無い場合
+----| *bold* +
+前後に**スペース**が無い場合
+|----
+`monospace`
+前後に``スペース``が無い場合
+----| `monospace` +
+前後に``スペース``が無い場合
+|----
+^上付き文字^のサンプル
+----| ^上付き文字^のサンプル
+|----
+~下付き文字~のサンプル
+----|~下付き文字~のサンプル
+|----
+(C) (R) -> => <-
+----| (C) (R) -> => <-
+|----
+"`ダブルカーブクォート`"
+----|"`ダブルカーブクォート`"
+|----
+'`シングルカーブクォート`'
+----|'`シングルカーブクォート`'
+|----
+[underline]#下線#
+----|[underline]#下線#
+|----
+[line-through]#取り消し線#
+----|[line-through]#取り消し線#
+|----
+[red]#赤色# [purple]#紫#
+前後に[blue]##スペース##が無い場合
+----|[red]#赤色# [purple]#紫# +
+前後に[blue]##スペース##が無い場合
+|====
+
+== リスト
+
+* リストは "`*`" ではじめる
+**  "`*`" の数でレベルを表現する
+*** レベル3
+**** レベル4
+
+== コードブロック
+
+[source,ruby,linenums]
+----
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+gem "asciidoctor"
+gem "asciidoctor-diagram" <1>
+gem "coderay" <2>
+----
+
+<1> 図
+<2> シンタックスハイライト
+
+== 引用
+
+[quote, 'https://ja.wikipedia.org/wiki/AsciiDoc[Wikipedia:AsciiDoc]']
+____
+AsciiDoc は 2002 年、Stuart Rackham によって構想された。 彼は Python で書かれた平文つまり対人可読性のあるファイルを尋常の出版に用いられる形式に変換する翻訳機 (「asciidoc」及び「a2x」) を公表した
+____
+
+== テーブル
+
+[format="csv"]
+|======
+1,2,3,4
+a,b,c,d
+A,B,C,D
+|======
+
+== 注釈
+
+[NOTE]
+====
+NOTE
+====
+
+[TIP]
+====
+TIP
+====
+
+[CAUTION]
+====
+CAUTION
+====

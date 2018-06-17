@@ -1,0 +1,55 @@
+baseURL = "/"
+languageCode = "ja-JP"
+title = "HUGO sample"
+paginate = "10" # Number of posts per page
+theme = "Mainroad"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+
+# シンタックスハイライト
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsCodeFencesGuessSyntax = true
+pygmentsStyle = "monokai"
+
+[permalinks]
+  post = "/:filename/"
+
+[Author]
+  name = "IWASE Shigeaki"
+  bio = "software developper"
+  avatar = ""
+
+[Params]
+  subtitle = "AsciiDoc article sample" # Subtitle of your site
+  description = " HUGO AsciiDoc article sample" # Description of your site
+  opengraph = true
+  twitter_cards = false
+  readmore = true # Show "Read more" button in list if true
+  leftsidebar = false # Move sidebar to the left side if true
+  authorbox = false
+  post_navigation = true
+  postSections = ["post"]
+  dateformat = "2006-01-01"
+
+[Params.widgets]
+  search = true # Enable "Search" widget
+  recent_articles = true # Enable "Recent arcticles" widget
+  categories = true # Enable "Categories" widget
+  tags = true # Enable "Tags" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+
+[[menu.main]]
+  name = "Home"
+  identifier = "home"
+  url = "/"
+  weight = -200
+  pre = "<i class='fa fa-home'></i>"
+
+[[menu.main]]
+  name = "Archives"
+  identifier = "archives"
+  url = "/post/"
+  weight = -180
+  pre = "<i class='fa fa-archive'></i>"

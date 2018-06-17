@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# asciidoctor のオプションに asciidoctor-diagram を追加するためのラッパー
+# 実行属性を付加する
+# パスを通して`hugo`が実行する`asciidoctor`がこのファイルになるようにする
+#
+# $ export PATH=./:$PATH
+# $ hugo server
+#
+
+bundle exec asciidoctor -r asciidoctor-diagram "$@"

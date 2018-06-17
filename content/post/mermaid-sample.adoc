@@ -1,0 +1,69 @@
+---
+title: "Mermaid Sample"
+date: 2018-06-16T00:37:07+09:00
+description: ""
+categories:
+  - sample
+tags:
+  - HUGO
+  - AsciiDoc
+  - mermaid
+draft: false
+---
+
+:lang: ja
+:toc: left
+:toclevels: 3
+:toc-title: 目次
+:sectnums:
+:sectnumlevels: 4
+:sectlinks:
+:chapter-label:
+:imagesdir: /images
+:imagesoutdir: ./static/images
+:example-caption: 例
+:table-caption: 表
+:figure-caption: 図
+:icons: font
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
+:stem: latexmath
+:author: IWASE Shigeaki
+:revnumber: 0.1
+:revdate: 2018-06-16T00:37:07+09:00
+
+= Mermaidのサンプル
+
+[mermaid]
+.png形式
+----
+graph LR;
+    AsciiDocテキスト -- asciidocotor-pdf --> PDF仕様書;
+    PlantUMLテキスト -- PlantUML --> png画像;
+    png画像 -- asciidoctor-pdf --> PDF仕様書;
+----
+
+[mermaid, format=svg]
+.svg形式
+----
+graph LR;
+    AsciiDocテキスト  -- asciidocotor-pdf --> PDF仕様書;
+    PlantUMLテキスト -- PlantUML --> png画像;
+    png画像 -- asciidoctor-pdf --> PDF仕様書;
+----
+
+[mermaid]
+.シーケンス図サンプル
+....
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+....

@@ -1,0 +1,85 @@
+---
+title: "PlantUML Sample"
+date: 2018-06-16T01:45:06+09:00
+description: ""
+categories:
+  - sample
+tags:
+  - HUGO
+  - PlantUML
+  - AsciiDoc
+draft: false
+---
+
+:lang: ja
+:toc: left
+:toclevels: 3
+:toc-title: 目次
+:sectnums:
+:sectnumlevels: 4
+:sectlinks:
+:chapter-label:
+:imagesdir: /images
+:imagesoutdir: ./static/images
+:example-caption: 例
+:table-caption: 表
+:figure-caption: 図
+:icons: font
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
+:stem: latexmath
+:author: IWASE Shigeaki
+:revnumber: 0.1
+:revdate: 2018-06-16T01:45:06+09:00
+
+= PlantUML サンプル
+
+[plantuml]
+.png形式
+----
+scale 600 width
+
+[*] -> 状態1
+状態1 --> 状態2 : 成功
+状態1 --> [*] : 中断
+状態2 --> 状態3 : 成功
+状態2 --> [*] : 中断
+state 状態3 {
+  state "Accumulate Enough Data\nLong State Name" as long1
+  long1 : Just a test
+  [*] --> long1
+  long1 --> long1 : 新規データ
+  long1 --> ProcessData : Enough Data
+}
+状態3 --> 状態3 : 失敗
+状態3 --> [*] : 成功 / 結果保存
+状態3 --> [*] : 中断
+----
+
+[plantuml, format=svg]
+.svn形式
+----
+scale 600 width
+
+[*] -> 状態1
+状態1 --> 状態2 : 成功
+状態1 --> [*] : 中断
+状態2 --> 状態3 : 成功
+状態2 --> [*] : 中断
+state 状態3 {
+  state "Accumulate Enough Data\nLong State Name" as long1
+  long1 : Just a test
+  [*] --> long1
+  long1 --> long1 : 新規データ
+  long1 --> ProcessData : Enough Data
+}
+状態3 --> 状態3 : 失敗
+状態3 --> [*] : 成功 / 結果保存
+状態3 --> [*] : 中断
+----
+
+[plantuml, "diag-listfonts", png]
+.使用可能フォント一覧
+----
+listfonts 0123456789abcdABCD=漢字ひらがなカタカナ
+----
