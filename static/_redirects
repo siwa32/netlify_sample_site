@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
+https://awesome-leavitt-cfa7f5.netlify.com/* https://hugo-sample.siwa32.com/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://awesome-leavitt-cfa7f5.netlify.com/* https://hugo-sample.siwa32.com/:splat 301!
