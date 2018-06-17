@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://hugo-sample.siwa32.com/"
 languageCode = "ja-JP"
 title = "HUGO sample"
 paginate = "10" # Number of posts per page
