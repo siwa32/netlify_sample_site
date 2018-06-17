@@ -1,6 +1,6 @@
 # サンプルサイト
 
-`HUGO`で作ったサンプルサイトを`Netlify`でホスティングするサンプルプロジェクト
+`HUGO`で作ったサンプルサイトを`Netlify`でホスティングするサンプルプロジェクト
 
 - `Netlify`でビルドしてデプロイ
 - `asciidoctor-diagram`対応
@@ -29,4 +29,4 @@
 - IPAフォント : https://ipafont.ipa.go.jp/
 - Noto Sans CJK JP : https://www.google.com/get/noto/
 
-※`PlantUML`や`Mermaid`で日本語を使用しないのであれば不要
+※`PlantUML`や`Mermaid`で日本語を使用しないのであれば不要
