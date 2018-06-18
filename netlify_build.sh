@@ -31,8 +31,10 @@ fc-cache -f -v
 hugo -v
 
 # copy generated diagram images to `public/images/`
-test -d ${IMGDIR} || mkdir ${IMGDIR}
-rsync -av --delete ${IMGOUTDIR}/diag-*.* ${IMGDIR}/
+if [ -d ${IMGOUTDIR} ];then
+    test -d ${IMGDIR} || mkdir ${IMGDIR}
+    rsync -av --delete ${IMGOUTDIR}/diag-*.* ${IMGDIR}/
+fi
 
 # confirm directory
 # ls -l
