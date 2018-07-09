@@ -31,7 +31,7 @@ pygmentsStyle = "monokai"
   authorbox = false
   post_navigation = true
   postSections = ["post"]
-  dateformat = "2006-01-01"
+  dateformat = "2006-01-02"
   mathjax = true
 
 [Params.widgets]
